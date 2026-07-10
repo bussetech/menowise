@@ -1,0 +1,39 @@
+# Source registry — the fetch allowlist for gn_info_scout on menowise
+# (EPIC2-04, platform ADR-0025). Schema: schema/sources.schema.json.
+# Convention: platform docs/source-registry.md.
+#
+# THE RULES (unchanged from the archetype)
+#   - This registry IS the allowlist: the deterministic fetch layer
+#     (platform scripts/source_fetch.py) requests exactly the `active`
+#     sources here (plus each host's robots.txt) and nothing else. The
+#     gnome never fetches.
+#   - status: manual sources are NEVER fetched — their material reaches the
+#     scout as hand-assembled research issues. Adding an active source is a
+#     one-file PR: verify robots.txt/ToS yourself, record the findings under
+#     robots:, set the cadence.
+#
+# HEALTH-DOMAIN NOTE (menowise): peer-reviewed literature indices largely do
+# NOT expose a crawlable feed the fetch layer can use — PubMed's robots.txt
+# disallows /rss (verified 2026-07-10); programmatic access is NCBI
+# E-utilities under its own usage policy, which is a seeding-pass decision
+# (menowise#4), not the generic RSS/link-list fetcher. So the spine is
+# registered `manual` for now; wiring active journal/guideline sources is
+# the seeding pass, deliberately careful (health restraint). This file is a
+# minimal honest seed, not the finished allowlist.
+
+version: 1
+
+sources:
+  - id: pubmed
+    type: filing-index
+    url: https://pubmed.ncbi.nlm.nih.gov/
+    cadence: monthly
+    parser: link-list
+    publisher: "National Library of Medicine (PubMed)"
+    scope: "Index of peer-reviewed biomedical literature — the menopause/midlife-health evidence base."
+    status: manual
+    robots:
+      checked: "2026-07-10"
+      notes: "robots.txt sets Crawl-delay 1 and DISALLOWS /rss and /rss-feed (verified 2026-07-10) — no crawlable feed for the generic fetcher. Sanctioned programmatic access is NCBI E-utilities (eutils.ncbi.nlm.nih.gov) under the NCBI usage/rate policy + API key; wiring that is a seeding-pass decision. Kept manual (never auto-fetched) until then — cited material reaches the scout via research issues."
+    added: "2026-07-10"
+    notes: "Citations resolve to https://pubmed.ncbi.nlm.nih.gov/<PMID>/ or the article DOI."

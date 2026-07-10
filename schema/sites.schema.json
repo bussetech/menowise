@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://menowise.bussetech.com/schema/sites.schema.json",
+  "title": "menowise entry record",
+  "description": "A canonical, cited entry about a menopause / midlife-women's-health topic, symptom, or intervention — the 'sites' slot of the info archetype, built by gn_info_records clustering signals. FROZEN structural fields (id, status, sources, signals, confidence, first_seen, last_updated) are the archetype contract the records gnome emits; the domain fields (title, kind, summary, evidence_strength) are profile-defined (data/profiles/records.md). Aggregation and navigation only — NOT medical advice. Every published entry is cited to the literature; honest-zero states (surveyed-thin/surveyed-empty) are content, not gaps (GD-0004).",
+  "type": "object",
+  "required": ["id", "title", "kind", "status", "first_seen", "last_updated", "confidence"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*[a-z0-9]$",
+      "description": "Unique slug; must equal the filename stem. Deterministic per the profile id rule."
+    },
+    "title": { "type": "string", "minLength": 1, "description": "Human-readable entry title (e.g. 'Vasomotor symptoms (hot flushes)')." },
+    "kind": {
+      "type": "string",
+      "enum": ["topic", "symptom", "intervention"],
+      "description": "What the entry is; also the entities.yml kind it must key into."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Navigation-only synopsis of what the literature says — no advice, no diagnosis, no treatment recommendation. States the evidence honestly. Required in practice for published entries (see status)."
+    },
+    "evidence_strength": {
+      "type": "string",
+      "enum": ["strong", "moderate", "limited", "insufficient"],
+      "description": "Resolved by gn_info_records from the clustered signals' study_type/sample_size per the profile's evidence rubric: strong = concordant meta-analyses / systematic reviews; moderate = RCT evidence; limited = observational only; insufficient = guideline/expert opinion or sparse/conflicting. Required for published entries (see status)."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["published", "surveyed-thin", "surveyed-empty"],
+      "description": "published = cited entry; surveyed-thin = surveyed, literature sparse (a few citations, no confident synthesis); surveyed-empty = surveyed, no adequate literature found. Thin/empty are honest-zero CONTENT, not gaps (GD-0004)."
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url"],
+        "additionalProperties": false,
+        "properties": {
+          "url": { "type": "string", "pattern": "^https?://", "description": "Citation URL (DOI/PMID/journal/guideline), verbatim from the supporting signals." },
+          "title": { "type": "string" },
+          "publisher": { "type": "string", "description": "Journal or issuing body." },
+          "date": { "type": "string", "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$" },
+          "study_type": {
+            "type": "string",
+            "enum": ["meta-analysis", "systematic-review", "rct", "cohort", "case-control", "cross-sectional", "narrative-review", "guideline", "other"],
+            "description": "The cited work's design, when the signals state it — feeds evidence_strength."
+          },
+          "sample_size": { "type": "integer", "minimum": 1, "description": "Only where the source states it." },
+          "note": { "type": "string", "description": "Which claims this source supports." }
+        }
+      },
+      "description": "The literature this entry cites. Union of the source URLs from the signals used, verbatim."
+    },
+    "signals": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Refs: data/signals/<id>.yml — the observations this entry resolves."
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "description": "Aggregate corroboration level across clustered signals (NOT evidence_strength — this is how well sources agree on the load-bearing facts)."
+    },
+    "first_seen": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "description": "When menowise first recorded this entry." },
+    "last_updated": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "notes": { "type": "string", "description": "Conflicting reports, scope caveats, why the literature is thin — the signal texture." }
+  },
+  "allOf": [
+    {
+      "$comment": "Published entries must be cited and must carry a summary + an evidence_strength label — the health posture, schema-enforced.",
+      "if": { "properties": { "status": { "const": "published" } } },
+      "then": {
+        "required": ["summary", "evidence_strength", "sources", "signals"],
+        "properties": { "sources": { "minItems": 1 }, "signals": { "minItems": 1 } }
+      }
+    }
+  ]
+}

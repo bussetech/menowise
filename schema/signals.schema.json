@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://menowise.bussetech.com/schema/signals.schema.json",
+  "title": "menowise signal",
+  "description": "One claim from one source about one entry-subject. This is the info-archetype signal contract, FROZEN as kdc defined it (ADR-0045) and emitted verbatim by gn_info_scout — its fields are fixed; the menopause/midlife-health domain is expressed through the profile's attribute vocabulary (data/profiles/scout.md), NOT by changing this shape. Append-only; conflicting signals coexist by design (signal > canon). Provenance carries the literature citation: source_url = DOI/PMID/journal URL, publisher = the journal, source_date = publication year.",
+  "type": "object",
+  "required": ["id", "attribute", "value", "source_url", "observed_date", "collected_by", "confidence"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^sig-\\d{8}-[a-z0-9][a-z0-9-]*[a-z0-9]$",
+      "description": "sig-YYYYMMDD-<slug>; must equal the filename stem."
+    },
+    "site_id": {
+      "type": ["string", "null"],
+      "description": "Ref: data/sites/<id>.yml (the canonical entry). Null while the subject is an unmatched candidate."
+    },
+    "site_hint": {
+      "type": "string",
+      "description": "Free-text subject identification when site_id is null (the topic/symptom/intervention as reported). Omit the key entirely when site_id is set."
+    },
+    "attribute": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.]+$",
+      "description": "What the claim is about, from the profile's attribute vocabulary: study_type, sample_size, population, intervention, comparator, outcome, effect, safety, guideline_recommendation, prevalence, definition, …"
+    },
+    "value": { "type": "string", "minLength": 1, "description": "The claim, raw, as reported by the source — no normalization here." },
+    "source_url": { "type": "string", "pattern": "^https?://", "description": "The citation URL, verbatim: a DOI (https://doi.org/…), PubMed (https://pubmed.ncbi.nlm.nih.gov/…), or the journal/guideline URL." },
+    "source_title": { "type": "string", "description": "Article/guideline title." },
+    "publisher": { "type": "string", "description": "The journal or issuing body (e.g. 'JAMA', 'Cochrane Database Syst Rev', 'The Menopause Society')." },
+    "source_date": {
+      "type": "string",
+      "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$",
+      "description": "Publication date, as precise as the source gives (year is common for literature)."
+    },
+    "observed_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "collected_by": { "type": "string", "description": "Gnome name + run id, or console identifier." },
+    "confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "description": "SOURCE-level trust for this single claim (primary literature / guideline body = high; secondary summary = medium; lay aggregator/headline = low). NOTE: this is provenance trust, NOT study-evidence strength — evidence_strength is resolved on the entry by gn_info_records from the clustered study_type/sample_size signals."
+    },
+    "notes": { "type": "string" }
+  }
+}

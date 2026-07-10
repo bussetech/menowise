@@ -1,0 +1,54 @@
+# Controlled vocabulary — the topics, symptoms, and interventions menowise
+# entries organize around (schema: schema/entities.schema.json). Curated,
+# low churn. gn_info_records references these ids and never invents them; an
+# entry's `kind` must match its entity's `kind`. These are navigation labels,
+# not clinical claims. Propose additions by PR.
+
+- id: perimenopause
+  label: "Perimenopause"
+  kind: topic
+  aliases: ["menopause transition", "climacteric"]
+
+- id: postmenopause
+  label: "Postmenopause"
+  kind: topic
+
+- id: vasomotor-symptoms
+  label: "Vasomotor symptoms"
+  kind: symptom
+  aliases: ["hot flushes", "hot flashes", "night sweats"]
+
+- id: genitourinary-syndrome-menopause
+  label: "Genitourinary syndrome of menopause"
+  kind: symptom
+  aliases: ["GSM", "vaginal atrophy", "vulvovaginal atrophy"]
+
+- id: sleep-disturbance-menopause
+  label: "Sleep disturbance in menopause"
+  kind: symptom
+  aliases: ["insomnia"]
+
+- id: bone-health-menopause
+  label: "Bone health and osteoporosis risk"
+  kind: topic
+  aliases: ["osteoporosis", "bone mineral density"]
+
+- id: menopausal-hormone-therapy
+  label: "Menopausal hormone therapy"
+  kind: intervention
+  aliases: ["MHT", "HRT", "hormone replacement therapy", "systemic estrogen"]
+
+- id: vaginal-estrogen
+  label: "Local vaginal estrogen"
+  kind: intervention
+  aliases: ["topical estrogen", "vaginal oestrogen"]
+
+- id: cbt-menopause
+  label: "Cognitive behavioural therapy for menopausal symptoms"
+  kind: intervention
+  aliases: ["CBT"]
+
+- id: non-hormonal-vasomotor
+  label: "Non-hormonal pharmacotherapy for vasomotor symptoms"
+  kind: intervention
+  aliases: ["SSRIs", "SNRIs", "gabapentin", "fezolinetant", "NK3 antagonist"]

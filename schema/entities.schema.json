@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://menowise.bussetech.com/schema/entities.schema.json",
+  "title": "menowise entities registry",
+  "description": "Controlled vocabulary of the topics, symptoms, and interventions entries organize around — the info archetype's 'entities' slot (kdc: operators.yml). Curated, low churn; gn_info_records references these ids and never invents them. An entry's kind must match its entity's kind.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "label", "kind"],
+    "additionalProperties": false,
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*[a-z0-9]$" },
+      "label": { "type": "string", "minLength": 1 },
+      "kind": {
+        "type": "string",
+        "enum": ["topic", "symptom", "intervention"]
+      },
+      "aliases": { "type": "array", "items": { "type": "string" } },
+      "notes": { "type": "string" }
+    }
+  }
+}

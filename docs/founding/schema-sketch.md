@@ -5,6 +5,19 @@ with provenance and confidence**. Two validated dataset/schema pairs plus a
 controlled-vocabulary entities file and a source registry. This replaces the
 template's starter `records` dataset.
 
+> **Correction (buildout, 2026-07-10) — of-record ≠ true.** This sketch was
+> drafted to the *domain ideal*, before the `info` pair's **frozen output
+> contract** was checked against the actual gnome prompts. `gn_info_scout`
+> emits a **fixed signal skeleton** (`attribute`/`value`/`source_url`/
+> `site_id`/… — see the prompt's strict output block); it **cannot** emit the
+> `claim`/`citation`/`study_type` fields this sketch first proposed. The domain
+> is expressed by mapping onto the frozen shape via the profile's *attribute
+> vocabulary* (study_type/sample_size as attributes; DOI/PMID/journal as
+> `source_url`/`publisher`), not by a bespoke signal schema. The **authoritative
+> field definitions are the checked-in `schema/*.json`**; the tables below are
+> corrected to match them. This is config-only — zero gnome code — proven by a
+> `--fixtures` dry-run + direct schema validation (menowise buildout PR).
+
 Layout:
 
 ```
@@ -22,50 +35,68 @@ data/profiles/
   records.md       # gn_info_records deployment adapter (domain sections)
 ```
 
-## Dataset: signals (`data/signals/*.yml`, YAML)
+## Dataset: signals (`data/signals/*.yml`, YAML) — FROZEN archetype shape
 
-One record per source claim. Untrusted-provenance staging that records feeds on.
+One record per source claim. Untrusted-provenance staging that records feeds
+on. **Emitted verbatim by `gn_info_scout`; the fields are the archetype
+contract (ADR-0045), identical in shape to kdc's.** The menopause domain lives
+in *which* attributes are signal-worthy (the scout profile's vocabulary), not
+in the field set. Authoritative: `schema/signals.schema.json`.
 
 | field | type | constraints |
 |-------|------|-------------|
-| `id` | string | required, unique, slug (`sig-*`) |
-| `source` | string | required, must key into `data/sources.yml` |
-| `citation` | object | required: `{ doi?, pmid?, url, title, year }` — at least one stable identifier |
-| `entry_hint` | string | optional; candidate canonical entry `id` (records decides) |
-| `topic` | string | optional; must key into `entities.yml` if present |
-| `claim` | string | required; the extracted claim, plainly stated |
-| `study_type` | enum | required: `meta-analysis` \| `systematic-review` \| `rct` \| `cohort` \| `case-control` \| `cross-sectional` \| `narrative-review` \| `guideline` \| `other` |
-| `sample_size` | integer | optional; present only where the source states it |
-| `confidence` | enum | required: `high` \| `medium` \| `low` |
-| `captured_at` | date | required (ISO 8601) |
-| `notes` | string | optional; free text, fine-grained distinctions live here until they cluster |
+| `id` | string | required, unique, `sig-YYYYMMDD-<slug>`, = filename stem |
+| `site_id` | string\|null | ref `data/sites/<id>.yml`; null while unmatched |
+| `site_hint` | string | subject as reported (omit when `site_id` set) |
+| `attribute` | string | required; from the profile's vocabulary (`study_type`, `sample_size`, `effect`, `guideline_recommendation`, `population`, …) |
+| `value` | string | required; the claim raw, as reported |
+| `source_url` | string | required; the **citation** URL verbatim (DOI/PMID/journal/guideline) |
+| `source_title` / `publisher` / `source_date` | string | article title / journal or body / year |
+| `observed_date` | date | required; run date |
+| `collected_by` | string | required; `gn_info_scout/<version>` |
+| `confidence` | enum | required: `high`\|`medium`\|`low` — **source-level trust**, NOT study-evidence strength |
+| `notes` | string | optional |
+
+So a study's design/size are **attribute signals** (`attribute: study_type`,
+`value: "rct"`; `attribute: sample_size`, `value: "245"`); the citation is the
+`source_url`+`publisher`+`source_date` provenance. Evidence-strength labelling
+is resolved onto the *entry* by records, not the signal.
 
 Provenance: produced by `gn_info_scout` from allowlisted sources via
-`scripts/source_fetch.py` (ADR-0025). Cadence: scheduled scout runs. No
-transformation beyond extraction + confidence assignment.
+`scripts/source_fetch.py` (ADR-0025). No transformation beyond extraction +
+source-confidence assignment.
 
-## Dataset: entries (`data/sites/*.md` with YAML front matter)
+## Dataset: entries (`data/sites/*.yml`, YAML) — records-emitted
 
 Canonical, cited entries — the published unit. Negative outcomes are
 first-class per GD-0004.
 
+Domain fields are profile-defined; the **frozen structural fields** (`sources`,
+`signals`, `confidence`, `first_seen`, `last_updated`) are what the records
+gnome emits and must be present. Authoritative: `schema/sites.schema.json`.
+
 | field | type | constraints |
 |-------|------|-------------|
-| `id` | string | required, unique, slug |
+| `id` | string | required, unique, slug, = filename stem (deterministic per profile id rule) |
 | `title` | string | required |
-| `kind` | enum | required: `topic` \| `symptom` \| `intervention` |
-| `summary` | string | required; navigation-only, no advice |
-| `evidence_strength` | enum | required: `strong` \| `moderate` \| `limited` \| `insufficient` — label states study type/size in body |
-| `status` | enum | required: `published` \| `surveyed-thin` \| `surveyed-empty` — thin/empty are honest-zero content, not gaps (GD-0004) |
-| `citations` | array | required when `status: published`; each item references a `signals` `id` and/or a `sources` `id` |
-| `updated_at` | date | required (ISO 8601) |
-| `notes` | string | optional |
-| body (Markdown) | text | the entry prose; carries the honest evidence-strength discussion and the not-medical-advice framing |
+| `kind` | enum | required: `topic` \| `symptom` \| `intervention` (keys `entities.yml`) |
+| `summary` | string | navigation-only, no advice; **required when `published`** |
+| `evidence_strength` | enum | `strong`\|`moderate`\|`limited`\|`insufficient`; **required when `published`**; resolved from cited signals' study_type/size per the profile rubric |
+| `status` | enum | required: `published` \| `surveyed-thin` \| `surveyed-empty` — thin/empty are honest-zero content (GD-0004) |
+| `sources` | array | the cited literature (`{url, title?, publisher?, date?, study_type?, sample_size?, note?}`); **required, ≥1, when `published`** |
+| `signals` | array | consumed signal ids; **required, ≥1, when `published`** |
+| `confidence` | enum | required: `high`\|`medium`\|`low` — source *agreement* (not evidence_strength) |
+| `first_seen` / `last_updated` | date | required (ISO 8601) |
+| `notes` | string | optional; conflicts, scope caveats, why the literature is thin |
 
-Keys/relationships: `entries.citations[] → signals.id / sources.id`;
-`entries.kind` and any `signals.topic` reference `entities.yml`. A
-`surveyed-empty` entry with no citations is valid and expected where the
-literature is thin.
+Keys/relationships: `entries.sources[].url` are the verbatim citation URLs from
+`entries.signals[] → signals.id`; `entries.kind`/subject reference
+`entities.yml`. **The not-medical-advice invariant is schema-enforced:** a
+`published` entry with no `sources`/`signals` (or missing `summary`/
+`evidence_strength`) fails validation. A `surveyed-empty` entry with no
+citations is valid and expected where the literature is thin. Entries are
+`.yml` (records' output path) — the site renders pages from them; there is no
+per-entry Markdown body (records emits only schema fields).
 
 Provenance: produced by `gn_info_records` from merged signals, chained on
 `menowise-signals-merged`. Every published entry is cited to the literature.

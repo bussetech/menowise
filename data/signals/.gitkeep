@@ -1,0 +1,3 @@
+# Per-source signals emitted by gn_info_scout (schema/signals.schema.json).
+# One file per claim: data/signals/sig-YYYYMMDD-<slug>.yml. Empty pending the
+# seeding pass (menowise#4).

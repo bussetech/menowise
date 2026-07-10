@@ -45,11 +45,17 @@ where sources are peer-reviewed journals and reputable clinical literature.
 
 Text stores in `data/`, one JSON Schema per dataset in `schema/`:
 
-- `data/signals/*.yml` — per-source signals: a claim, its `citation`,
-  `study_type`, `sample_size` (where stated), and a `confidence`. Staging.
-- `data/sites/*.md` — canonical **entries** (the archetype's "sites" slot):
-  cited, carrying an `evidence_strength` label and a `status`. Honest zeros
-  (`surveyed-thin` / `surveyed-empty`) are content, not gaps (GD-0004).
+- `data/signals/*.yml` — per-source signals in the **frozen** info-archetype
+  shape `gn_info_scout` emits (`attribute`/`value`/`source_url`/`site_id`/…):
+  one claim per source, provenance = the citation (`source_url` is the
+  DOI/PMID/journal URL), `confidence` = source-level trust. The menopause
+  domain is the profile's *attribute vocabulary* (study_type, sample_size,
+  effect, …), not a bespoke schema. Staging.
+- `data/sites/*.yml` — canonical **entries** (the archetype's "sites" slot)
+  emitted by `gn_info_records`: cited, carrying an `evidence_strength` label
+  and a `status`. Honest zeros (`surveyed-thin`/`surveyed-empty`) are content,
+  not gaps (GD-0004). `published` entries are schema-required to carry
+  citations — not-medical-advice is enforced by the schema, not just prose.
 - `data/entities.yml` — controlled vocabulary (topics/symptoms/interventions).
 - `data/sources.yml` — registered journals/indices; the allowlist spine.
 - `data/index.md` — provenance statement; published data is CC BY 4.0.
