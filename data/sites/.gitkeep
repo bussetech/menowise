@@ -1,0 +1,3 @@
+# Canonical cited entries emitted by gn_info_records (schema/sites.schema.json).
+# One file per entry: data/sites/<id>.yml. Empty pending the seeding pass
+# (menowise#4). Honest-zero entries are content, not gaps (GD-0004).
