@@ -1,12 +1,12 @@
-# __PROJECT_NAME__
+# menowise
 
 **Status:** ![status](https://img.shields.io/badge/status-active-00843D) ·
-[![ci](https://github.com/__ORG__/__PROJECT_NAME__/actions/workflows/ci.yml/badge.svg)](https://github.com/__ORG__/__PROJECT_NAME__/actions/workflows/ci.yml)
-· **Site:** <https://__PROJECT_NAME__.__DOMAIN__> · **Visibility:** `__VISIBILITY__`
+[![ci](https://github.com/bussetech/menowise/actions/workflows/ci.yml/badge.svg)](https://github.com/bussetech/menowise/actions/workflows/ci.yml)
+· **Site:** <https://menowise.bussetech.com> · **Visibility:** `public`
 
-__PROJECT_DESCRIPTION__
+An aggregator of journal-evidenced information on menopause and women's midlife health — every entry cited, evidence strength labelled honestly. Aggregation and navigation only; not medical advice.
 
-A [__STUDIO_NAME__](https://__DOMAIN__) project: a static site
+A [Bussetech Software Studio](https://bussetech.com) project: a static site
 (Jekyll, shared studio theme) rendered from text-based data stores.
 
 ## Layout
