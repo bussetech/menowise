@@ -33,8 +33,19 @@ studio:
   nav:
     - title: Home
       url: /
+    - title: Entries
+      url: /entries/
+    - title: Data
+      url: /data/
+    - title: Cite
+      url: /cite/
 
 markdown: kramdown
+# Jekyll reads site.data from data/ (not _data/) so the CI-validated record
+# files are also the render source — one copy, no mirroring. (Template gap:
+# the factory _config omits this; any info project rendering site.data.* needs
+# it. Filed as a template finding.)
+data_dir: data
 sass:
   style: compressed
   # Never emit source maps: for private-published sites a .map file is a
