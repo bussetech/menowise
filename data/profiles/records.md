@@ -33,6 +33,12 @@ first_seen, last_updated, notes.
 - `sources`: the union of citation URLs from the signals used, verbatim
   (DOI/PMID/journal/guideline). Carry `study_type`/`sample_size` onto a
   source when its signals stated them — they feed `evidence_strength`.
+  **`study_type` MUST be one of the schema enum values exactly** — map any
+  prose the signals use onto: `meta-analysis`, `systematic-review` (incl.
+  scoping reviews), `rct`, `cohort` (incl. "cohort study"), `case-control`,
+  `cross-sectional` (incl. surveys), `narrative-review` (incl. generic
+  "review"), `guideline` (incl. position/consensus statements), or `other`.
+  Never emit free-text like "clinical guideline" — data CI rejects it.
 - `signals`: the ids of every consumed signal.
 
 ## evidence_strength rubric (resolve from the clustered signals)
