@@ -1,0 +1,17 @@
+id: menstrual-cycle-changes
+title: "Menstrual cycle changes in perimenopause"
+kind: symptom
+summary: "STRAW+10 consensus staging defines early perimenopause by a persistent difference of >=7 days in the length of consecutive menstrual cycles, and late perimenopause by an interval of >=60 days of amenorrhea; changes in menstrual cycle length are typically the first clinically recognizable sign of the transition."
+evidence_strength: insufficient
+status: published
+sources:
+  - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3340903/
+    title: "Executive summary of the Stages of Reproductive Aging Workshop +10 (STRAW+10)"
+    publisher: "STRAW+10 Executive Summary (Menopause / consensus)"
+    study_type: "guideline"
+signals:
+  - sig-20260710-menstrual-cycle-definition
+confidence: medium
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: "'Menstrual cycle changes' needs an entities entry (kind: symptom); id not invented. Definitional content from consensus staging (expert consensus → insufficient study quality). Related to the perimenopause topic entity."

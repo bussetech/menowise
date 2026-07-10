@@ -1,0 +1,20 @@
+id: skin-hair-changes
+title: "Skin and hair changes in menopause"
+kind: symptom
+summary: "A Climacteric (2022) review reports that estrogen supports skin collagen, and that after menopause skin collagen content declines (reported around 2% per year, with larger losses in the first years), reducing elasticity and hydration, while hair may thin (diffuse effluvium / female-pattern changes). Some studies report that HRT partially improves skin thickness/collagen when started near menopause onset."
+evidence_strength: limited
+status: published
+sources:
+  - url: https://www.tandfonline.com/doi/full/10.1080/13697137.2022.2050206
+    title: "Skin, hair and beyond: the impact of menopause (Climacteric 2022)"
+    publisher: "Climacteric"
+    date: "2022"
+    study_type: "narrative-review"
+signals:
+  - sig-20260710-skin-collagen-effect
+  - sig-20260710-skin-hrt-effect
+  - sig-20260710-skin-mechanism
+confidence: medium
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: "'Skin and hair changes' needs an entities entry (kind: symptom); id not invented. Single review source."
