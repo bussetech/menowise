@@ -9,7 +9,7 @@ sources:
     title: "Skin, hair and beyond: the impact of menopause (Climacteric 2022)"
     publisher: "Climacteric"
     date: "2022"
-    study_type: "review"
+    study_type: "narrative-review"
 signals:
   - sig-20260710-skin-collagen-effect
   - sig-20260710-skin-hrt-effect

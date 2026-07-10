@@ -8,7 +8,7 @@ sources:
   - url: https://www.swanstudy.org/changes-in-body-composition-and-weight-during-the-menopause-transition/
     title: "Changes in body composition and weight during the menopause transition (SWAN)"
     publisher: "SWAN (Study of Women's Health Across the Nation)"
-    study_type: "cohort study"
+    study_type: "cohort"
 signals:
   - sig-20260710-weight-effect
   - sig-20260710-weight-visceral-outcome

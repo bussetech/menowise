@@ -8,12 +8,12 @@ sources:
   - url: https://www.swanstudy.org/womens-health-info/depression-menopause/
     title: "Depression and the menopause transition (SWAN)"
     publisher: "SWAN (Study of Women's Health Across the Nation)"
-    study_type: "cohort study"
+    study_type: "cohort"
   - url: https://www.nice.org.uk/guidance/ng23
     title: "Menopause: identification and management (NG23)"
     publisher: "National Institute for Health and Care Excellence (NICE NG23)"
     date: "2015"
-    study_type: "clinical guideline"
+    study_type: "guideline"
 signals:
   - sig-20260710-low-mood-guideline
   - sig-20260710-low-mood-ssri-effect

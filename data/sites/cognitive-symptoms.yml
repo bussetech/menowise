@@ -8,11 +8,11 @@ sources:
   - url: https://www.thelancet.com/journals/lanogw/article/PIIS3050-5038(26)00043-9/fulltext
     title: "Cognitive symptoms of menopause (The Lancet OGWH review)"
     publisher: "The Lancet Obstetrics, Gynaecology & Women's Health"
-    study_type: "narrative review"
+    study_type: "narrative-review"
   - url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11738833/
     title: "Objective cognitive performance across menopause status (cohort study)"
     publisher: "cohort study of perimenopausal/menopausal women"
-    study_type: "cohort study"
+    study_type: "cohort"
     note: "Sample >14,000; objective performance differed only minimally across menopause status."
 signals:
   - sig-20260710-cognitive-definition

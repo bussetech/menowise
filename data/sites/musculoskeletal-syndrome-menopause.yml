@@ -9,7 +9,7 @@ sources:
     title: "Musculoskeletal syndrome of menopause (Climacteric 2024, PMID 39077777)"
     publisher: "Climacteric"
     date: "2024"
-    study_type: "review"
+    study_type: "narrative-review"
 signals:
   - sig-20260710-msk-definition
   - sig-20260710-msk-mechanism

@@ -9,12 +9,12 @@ sources:
     title: "Migraine in menopause (The Journal of Headache and Pain 2023, PMID 37730536)"
     publisher: "The Journal of Headache and Pain"
     date: "2023"
-    study_type: "review"
+    study_type: "narrative-review"
     note: "Estrogen-withdrawal hypothesis widely cited but evidence limited/methodologically inconsistent."
   - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4548761/
     title: "Migraine in menopausal women: a systematic review"
     publisher: "Migraine in menopausal women: a systematic review"
-    study_type: "systematic review"
+    study_type: "systematic-review"
 signals:
   - sig-20260710-migraine-certainty
   - sig-20260710-migraine-mechanism

@@ -9,7 +9,7 @@ sources:
     title: "Menopause: identification and management (NG23)"
     publisher: "National Institute for Health and Care Excellence (NICE NG23)"
     date: "2015"
-    study_type: "clinical guideline"
+    study_type: "guideline"
     note: "Guidance notes menopause-specific evidence for anxiety as a distinct symptom is more limited than for low mood."
 signals:
   - sig-20260710-anxiety-guideline

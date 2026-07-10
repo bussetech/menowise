@@ -8,7 +8,7 @@ sources:
   - url: https://www.nature.com/articles/s44294-025-00061-3
     title: "Perimenopause symptoms, severity, and healthcare seeking in women in the US"
     publisher: "npj Women's Health"
-    study_type: "cross-sectional survey"
+    study_type: "cross-sectional"
     note: "Prevalence survey; causal evidence separating fatigue from aging/sleep disruption is limited."
 signals:
   - sig-20260710-fatigue-certainty

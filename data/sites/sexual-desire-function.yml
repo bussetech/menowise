@@ -9,7 +9,7 @@ sources:
     title: "Menopause: identification and management (NG23)"
     publisher: "National Institute for Health and Care Excellence (NICE NG23)"
     date: "2015"
-    study_type: "clinical guideline"
+    study_type: "guideline"
 signals:
   - sig-20260710-sexual-function-effect
   - sig-20260710-sexual-function-guideline

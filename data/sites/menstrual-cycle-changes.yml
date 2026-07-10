@@ -8,7 +8,7 @@ sources:
   - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3340903/
     title: "Executive summary of the Stages of Reproductive Aging Workshop +10 (STRAW+10)"
     publisher: "STRAW+10 Executive Summary (Menopause / consensus)"
-    study_type: "consensus statement"
+    study_type: "guideline"
 signals:
   - sig-20260710-menstrual-cycle-definition
 confidence: medium
