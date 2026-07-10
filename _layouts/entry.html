@@ -1,0 +1,70 @@
+---
+layout: default
+---
+{%- assign rec = site.data.sites[page.entry_id] -%}
+{%- comment -%}
+  Evidence-strength → wayfinding chip. Color is coarse signal only; the label
+  always carries the exact word, so precision is never lost.
+    strong/moderate → ok (green) · limited → warn (amber) · insufficient → error (red)
+{%- endcomment -%}
+{%- assign _chip = "ok" -%}
+{%- if rec.evidence_strength == "limited" %}{% assign _chip = "warn" %}{% endif -%}
+{%- if rec.evidence_strength == "insufficient" %}{% assign _chip = "error" %}{% endif -%}
+<article class="prose">
+  <p class="eyebrow"><a href="/entries/">Entries</a> / {{ rec.kind }}</p>
+  <h1>{{ rec.title }}</h1>
+
+  <p>
+    {% include status-chip.html status=_chip label=rec.evidence_strength filled=true %}
+    <strong>Evidence strength</strong>
+    &nbsp;·&nbsp; <strong>Status:</strong> {{ rec.status }}
+    &nbsp;·&nbsp; <strong>Source agreement:</strong> {{ rec.confidence }}
+  </p>
+
+  {% include callout.html label="Not medical advice" body="Menowise aggregates and organizes what the published literature reports, with citations. It does not diagnose, advise, or recommend treatment. Talk to a qualified clinician about your own care." %}
+
+  {%- if rec.status == "surveyed-empty" %}
+  <p><em>This topic was surveyed and adequate journal evidence has not yet been
+  aggregated here. An honest zero is content, not a gap.</em></p>
+  {%- else %}
+  <h2>What the literature reports</h2>
+  <p>{{ rec.summary }}</p>
+  {%- endif %}
+
+  {%- if rec.sources and rec.sources.size > 0 %}
+  <h2>Citations</h2>
+  <ul>
+    {%- for s in rec.sources %}
+    <li>
+      <a href="{{ s.url }}" rel="nofollow noopener">{{ s.title | default: s.url }}</a>
+      {%- if s.publisher %} — {{ s.publisher }}{% endif -%}
+      {%- if s.date %} ({{ s.date }}){% endif -%}
+      {%- if s.study_type %} · <em>{{ s.study_type }}{% if s.sample_size %}, n={{ s.sample_size }}{% endif %}</em>{% endif -%}
+      {%- if s.note %}<br><span class="muted">{{ s.note }}</span>{% endif -%}
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+
+  {%- if rec.notes %}
+  <h2>Notes</h2>
+  <p class="muted">{{ rec.notes }}</p>
+  {%- endif %}
+
+  <h2>Provenance</h2>
+  <p>
+    This entry is resolved from per-source signals; the raw claims are the audit
+    trail behind it.
+  </p>
+  <ul>
+    <li><strong>Machine record:</strong> <a href="/data/sites/{{ rec.id }}.yml">/data/sites/{{ rec.id }}.yml</a> (schema-valid, verbatim)</li>
+    {%- if rec.signals and rec.signals.size > 0 %}
+    <li><strong>Signals:</strong>
+      {%- for sig in rec.signals %} <a href="/data/signals/{{ sig }}.yml"><code>{{ sig }}</code></a>{% unless forloop.last %},{% endunless %}{%- endfor %}
+    </li>
+    {%- endif %}
+    <li>First recorded {{ rec.first_seen }} · last updated {{ rec.last_updated }}</li>
+  </ul>
+
+  <p class="eyebrow"><a href="/cite/">How to cite</a> · <a href="/data/">Datasets &amp; license</a></p>
+</article>
