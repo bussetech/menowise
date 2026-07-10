@@ -1,0 +1,43 @@
+id: menopausal-hormone-therapy
+title: "Menopausal hormone therapy"
+kind: intervention
+summary: >-
+  Menopausal hormone therapy (MHT; also called HRT or hormone replacement
+  therapy) is addressed in The Menopause Society's 2022 Hormone Therapy
+  Position Statement, which reports that hormone therapy remains the most
+  effective treatment for vasomotor symptoms and the genitourinary syndrome of
+  menopause and has been shown to prevent bone loss and fracture. The statement
+  reports that for women younger than 60 years or within 10 years of menopause
+  onset and without contraindications, the benefit-risk ratio is favorable for
+  treating bothersome VMS and preventing bone loss. It also reports that for
+  women who initiate hormone therapy more than 10 years from menopause onset or
+  who are older than 60, the benefit-risk ratio appears less favorable, with
+  greater absolute risks of coronary heart disease, stroke, venous
+  thromboembolism, and dementia. This entry summarizes what the literature
+  reports for navigation and is not medical advice.
+evidence_strength: moderate
+status: published
+sources:
+  - url: https://journals.lww.com/menopausejournal/fulltext/2022/07000/the_2022_hormone_therapy_position_statement_of_the.4.aspx
+    title: "The Menopause Society — 2022 Hormone Therapy Position Statement (Menopause, 2022)"
+    publisher: The Menopause Society (Menopause journal)
+    date: "2022"
+    note: "Effectiveness for VMS/GSM and bone; timing-dependent benefit-risk (early vs. late initiation)."
+signals:
+  - sig-20260710-hormone-therapy-guideline-recommendation
+  - sig-20260710-hormone-therapy-early-benefit-risk
+  - sig-20260710-hormone-therapy-late-initiation-safety
+confidence: medium
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: >-
+  Maps to entities.yml `menopausal-hormone-therapy` (intervention); the id
+  reuses the canonical entity id rather than re-slugging to `hormone-therapy`,
+  keeping record and entity aligned and stable across runs. All three signals
+  derive from a single source (The Menopause Society 2022 HT Position
+  Statement), so confidence is medium. evidence_strength: moderate — a
+  professional-society position statement synthesizing graded evidence; the
+  underlying trials/meta-analyses are not directly cited. The timing-hypothesis
+  benefit-risk distinction (early vs. late initiation) is a facet kept within
+  this single intervention entry. Vasomotor symptoms and GSM are separate
+  symptom entries and cross-referenced there.
