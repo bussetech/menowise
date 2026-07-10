@@ -1,0 +1,19 @@
+id: sexual-desire-function
+title: "Reduced sexual desire and function in menopause"
+kind: symptom
+summary: "NICE NG23 reports that local (vaginal) oestrogen improves vaginal symptoms and sexual function, and describes offering local vaginal oestrogen to women with urogenital atrophy, including those already using systemic HRT."
+evidence_strength: insufficient
+status: published
+sources:
+  - url: https://www.nice.org.uk/guidance/ng23
+    title: "Menopause: identification and management (NG23)"
+    publisher: "National Institute for Health and Care Excellence (NICE NG23)"
+    date: "2015"
+    study_type: "clinical guideline"
+signals:
+  - sig-20260710-sexual-function-effect
+  - sig-20260710-sexual-function-guideline
+confidence: medium
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: "'Reduced sexual desire and function' needs an entities entry (kind: symptom); id not invented. Evidence cited only via guideline (→ insufficient study quality). Related entities: vaginal-estrogen (intervention) and genitourinary-syndrome-menopause (symptom); the vaginal-estrogen-for-GSM intervention would be a distinct entry."

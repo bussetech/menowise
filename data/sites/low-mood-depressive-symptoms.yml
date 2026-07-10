@@ -1,0 +1,24 @@
+id: low-mood-depressive-symptoms
+title: "Low mood and depressive symptoms in menopause"
+kind: symptom
+summary: "The SWAN cohort reports higher odds of clinically significant depressive symptoms during perimenopause and early postmenopause than premenopause (roughly 1.5x or more, highest in late perimenopause); premenopausal women with no depression history were about twice as likely to develop significant depressive symptoms on entering perimenopause, and associations persisted after accounting for psychosocial and health factors. NICE NG23 describes considering HRT and/or CBT for low mood associated with menopause, and reports that SSRIs/SNRIs have not been shown to ease low mood in the absence of a diagnosis of depression."
+evidence_strength: limited
+status: published
+sources:
+  - url: https://www.swanstudy.org/womens-health-info/depression-menopause/
+    title: "Depression and the menopause transition (SWAN)"
+    publisher: "SWAN (Study of Women's Health Across the Nation)"
+    study_type: "cohort study"
+  - url: https://www.nice.org.uk/guidance/ng23
+    title: "Menopause: identification and management (NG23)"
+    publisher: "National Institute for Health and Care Excellence (NICE NG23)"
+    date: "2015"
+    study_type: "clinical guideline"
+signals:
+  - sig-20260710-low-mood-guideline
+  - sig-20260710-low-mood-ssri-effect
+  - sig-20260710-low-mood-swan-effect
+confidence: high
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: "'Low mood and depressive symptoms' needs an entities entry (kind: symptom); id not invented. Interventions referenced (CBT — cbt-menopause; HRT — menopausal-hormone-therapy) are distinct intervention entries. Independent sources (SWAN cohort + NICE) concordant."

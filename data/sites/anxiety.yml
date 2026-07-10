@@ -1,0 +1,19 @@
+id: anxiety
+title: "Anxiety in menopause"
+kind: symptom
+summary: "NICE NG23 and British Menopause Society guidance describe cognitive behavioural therapy (CBT) and an individualized approach for anxiety experienced in relation to menopause. Menopause-specific evidence for anxiety as a distinct symptom is more limited than for low mood."
+evidence_strength: insufficient
+status: surveyed-thin
+sources:
+  - url: https://www.nice.org.uk/guidance/ng23
+    title: "Menopause: identification and management (NG23)"
+    publisher: "National Institute for Health and Care Excellence (NICE NG23)"
+    date: "2015"
+    study_type: "clinical guideline"
+    note: "Guidance notes menopause-specific evidence for anxiety as a distinct symptom is more limited than for low mood."
+signals:
+  - sig-20260710-anxiety-guideline
+confidence: medium
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: "Guideline-only, sparse menopause-specific evidence — surveyed-thin. 'Anxiety' needs an entities entry (kind: symptom); not in current registry, id not invented. Distinct from the low-mood/depressive-symptoms entry."

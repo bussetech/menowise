@@ -1,0 +1,18 @@
+id: palpitations
+title: "Heart palpitations in menopause"
+kind: symptom
+summary: "A scoping review reports palpitations affecting up to about 42% of perimenopausal and 54% of postmenopausal women. Hormonal changes are implicated, but menopause-specific causal evidence is limited and more research is needed."
+evidence_strength: limited
+status: published
+sources:
+  - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9289918/
+    title: "Correlates of palpitations during menopause: a scoping review"
+    publisher: "Correlates of palpitations during menopause: a scoping review"
+    study_type: "scoping review"
+signals:
+  - sig-20260710-palpitations-certainty
+  - sig-20260710-palpitations-prevalence
+confidence: medium
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: "'Heart palpitations' needs an entities entry (kind: symptom); id not invented. Single scoping-review source; causal evidence limited."

@@ -1,0 +1,20 @@
+id: musculoskeletal-syndrome-menopause
+title: "Joint and muscle pain (musculoskeletal syndrome of menopause)"
+kind: symptom
+summary: "The 'musculoskeletal syndrome of menopause' is described (Climacteric 2024) as a cluster of musculoskeletal symptoms — arthralgia, loss of muscle mass, reduced bone density, and osteoarthritis progression — linked to estrogen decline, and estimated to affect roughly 70% of women in the transition. In support of estrogen's role, aromatase inhibitors, which sharply lower estrogen, cause new or worsening joint pain in about half of women who take them."
+evidence_strength: limited
+status: published
+sources:
+  - url: https://pubmed.ncbi.nlm.nih.gov/39077777/
+    title: "Musculoskeletal syndrome of menopause (Climacteric 2024, PMID 39077777)"
+    publisher: "Climacteric"
+    date: "2024"
+    study_type: "review"
+signals:
+  - sig-20260710-msk-definition
+  - sig-20260710-msk-mechanism
+  - sig-20260710-msk-prevalence
+confidence: medium
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: "'Musculoskeletal syndrome of menopause' needs an entities entry (kind: symptom); id not invented. Single review source; the concept is recently named and the prevalence estimate is approximate."

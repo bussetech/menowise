@@ -1,0 +1,18 @@
+id: sleep-disturbance-menopause
+title: "Sleep disturbance in menopause (insomnia)"
+kind: symptom
+summary: "NICE NG23 reports that, compared with placebo, hormone therapy consistently improved menopausal symptoms including sleep outcomes and quality of life."
+evidence_strength: moderate
+status: published
+sources:
+  - url: https://www.nice.org.uk/guidance/ng23
+    title: "Menopause: identification and management (NG23)"
+    publisher: "National Institute for Health and Care Excellence (NICE NG23)"
+    date: "2015"
+    study_type: "clinical guideline"
+signals:
+  - sig-20260710-sleep-disturbance-effect
+confidence: medium
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: "Maps to entities id sleep-disturbance-menopause (kind: symptom, alias 'insomnia'). Placebo-controlled improvement reported via NICE (controlled-trial evidence → moderate); single source, so confidence medium. Menopausal hormone therapy (menopausal-hormone-therapy) is a distinct intervention entry."

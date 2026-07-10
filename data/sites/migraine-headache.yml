@@ -1,0 +1,24 @@
+id: migraine-headache
+title: "Migraine and headache in menopause"
+kind: symptom
+summary: "Migraine is described as sensitive to hormonal fluctuation, and the estrogen-withdrawal hypothesis is widely cited to explain changes around menopause; however the supporting evidence remains limited and is constrained by methodologic inconsistencies and variable case definitions."
+evidence_strength: limited
+status: published
+sources:
+  - url: https://pubmed.ncbi.nlm.nih.gov/37730536/
+    title: "Migraine in menopause (The Journal of Headache and Pain 2023, PMID 37730536)"
+    publisher: "The Journal of Headache and Pain"
+    date: "2023"
+    study_type: "review"
+    note: "Estrogen-withdrawal hypothesis widely cited but evidence limited/methodologically inconsistent."
+  - url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4548761/
+    title: "Migraine in menopausal women: a systematic review"
+    publisher: "Migraine in menopausal women: a systematic review"
+    study_type: "systematic review"
+signals:
+  - sig-20260710-migraine-certainty
+  - sig-20260710-migraine-mechanism
+confidence: medium
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: "'Migraine and headache' needs an entities entry (kind: symptom); id not invented. A systematic review exists but underlying evidence is characterised as limited, so evidence_strength held at limited."
