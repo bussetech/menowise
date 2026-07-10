@@ -1,0 +1,11 @@
+id: sig-20260710-palpitations-prevalence
+site_id: null
+site_hint: "Heart palpitations — symptom"
+attribute: prevalence
+value: "Palpitations affect up to ~42% of perimenopausal and ~54% of postmenopausal women."
+source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9289918/
+source_title: "Correlates of palpitations during menopause: a scoping review"
+publisher: "Correlates of palpitations during menopause: a scoping review"
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

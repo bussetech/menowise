@@ -1,0 +1,11 @@
+id: sig-20260710-low-mood-swan-effect
+site_id: null
+site_hint: "Low mood and depressive symptoms — symptom"
+attribute: effect
+value: "Odds of clinically significant depressive symptoms were higher during perimenopause and early postmenopause than premenopause (roughly 1.5x or more, highest in late perimenopause); premenopausal women with no depression history entering perimenopause were about twice as likely to develop significant depressive symptoms; associations persisted after accounting for psychosocial and health factors."
+source_url: https://www.swanstudy.org/womens-health-info/depression-menopause/
+source_title: "Depression and the menopause transition (SWAN)"
+publisher: SWAN (Study of Women's Health Across the Nation)
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

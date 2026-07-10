@@ -1,0 +1,12 @@
+id: sig-20260710-msk-definition
+site_id: null
+site_hint: "Joint and muscle pain (musculoskeletal syndrome of menopause) — symptom"
+attribute: definition
+value: "The 'musculoskeletal syndrome of menopause' is a cluster of musculoskeletal symptoms (arthralgia, loss of muscle mass, reduced bone density, osteoarthritis progression) linked to estrogen decline."
+source_url: https://pubmed.ncbi.nlm.nih.gov/39077777/
+source_title: "Musculoskeletal syndrome of menopause (Climacteric 2024, PMID 39077777)"
+publisher: Climacteric
+source_date: "2024"
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

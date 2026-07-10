@@ -1,0 +1,11 @@
+id: sig-20260710-fatigue-certainty
+site_id: null
+site_hint: "Fatigue — symptom"
+attribute: certainty
+value: "Menopause-specific causal evidence distinguishing fatigue from aging and sleep disruption is limited."
+source_url: https://www.nature.com/articles/s44294-025-00061-3
+source_title: "Perimenopause symptoms, severity, and healthcare seeking in women in the US"
+publisher: npj Women's Health
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

@@ -1,0 +1,11 @@
+id: sig-20260710-cognitive-objective-effect
+site_id: null
+site_hint: "Cognitive symptoms (brain fog) — symptom"
+attribute: effect
+value: "In a large cohort (>14,000), objective cognitive performance differed only minimally across menopause status — the subjective/objective mismatch is the key finding."
+source_url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11738833/
+source_title: "Objective cognitive performance across menopause status (cohort study)"
+publisher: cohort study of perimenopausal/menopausal women
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

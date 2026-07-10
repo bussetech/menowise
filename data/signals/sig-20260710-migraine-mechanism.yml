@@ -1,0 +1,11 @@
+id: sig-20260710-migraine-mechanism
+site_id: null
+site_hint: "Migraine and headache — symptom"
+attribute: mechanism
+value: "Migraine is described as sensitive to hormonal fluctuation."
+source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4548761/
+source_title: "Migraine in menopausal women: a systematic review"
+publisher: "Migraine in menopausal women: a systematic review"
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

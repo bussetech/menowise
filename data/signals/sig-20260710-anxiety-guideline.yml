@@ -1,0 +1,13 @@
+id: sig-20260710-anxiety-guideline
+site_id: null
+site_hint: "Anxiety — symptom"
+attribute: guideline_recommendation
+value: "NICE and British Menopause Society guidance recommend CBT and an individualized approach for anxiety experienced as a result of menopause."
+source_url: https://www.nice.org.uk/guidance/ng23
+source_title: "Menopause: identification and management (NG23)"
+publisher: National Institute for Health and Care Excellence (NICE NG23)
+source_date: "2015"
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high
+notes: "Notes flag that menopause-specific evidence for anxiety as a distinct symptom is more limited than for low mood."

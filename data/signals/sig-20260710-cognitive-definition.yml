@@ -1,0 +1,11 @@
+id: sig-20260710-cognitive-definition
+site_id: null
+site_hint: "Cognitive symptoms (brain fog) — symptom"
+attribute: definition
+value: "Cognitive symptoms in menopause are self-reported impairment in one or more cognitive domains (memory, attention, organisation, problem-solving, word retrieval) in the absence of notable objective decline, which can fluctuate and cause distress."
+source_url: https://www.thelancet.com/journals/lanogw/article/PIIS3050-5038(26)00043-9/fulltext
+source_title: "Cognitive symptoms of menopause (The Lancet OGWH review)"
+publisher: The Lancet Obstetrics, Gynaecology & Women's Health
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high
