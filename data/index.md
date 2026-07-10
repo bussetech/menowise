@@ -18,8 +18,8 @@ labels. They do not diagnose, advise, or recommend treatment.
 
 | dataset | files | schema |
 | --- | --- | --- |
-| signals (per-source claims) | [`signals/`](/data/signals/) | [`signals.schema.json`](/schema/signals.schema.json) |
-| entries (canonical, cited) | [`sites/`](/data/sites/) | [`sites.schema.json`](/schema/sites.schema.json) |
+| signals (per-source claims) | `data/signals/*.yml` (empty; seeding pass) | [`signals.schema.json`](/schema/signals.schema.json) |
+| entries (canonical, cited) | `data/sites/*.yml` (empty; seeding pass) | [`sites.schema.json`](/schema/sites.schema.json) |
 | entities (controlled vocabulary) | [`entities.yml`](/data/entities.yml) | [`entities.schema.json`](/schema/entities.schema.json) |
 | sources (fetch allowlist) | [`sources.yml`](/data/sources.yml) | [`sources.schema.json`](/schema/sources.schema.json) |
 
