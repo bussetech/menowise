@@ -1,0 +1,34 @@
+id: fezolinetant
+title: "Fezolinetant"
+kind: intervention
+summary: >-
+  Fezolinetant is a neurokinin 3 (NK3) receptor antagonist and, per The
+  Menopause Society's 2023 Nonhormone Therapy Position Statement, a
+  first-in-class FDA-approved medication. The statement reports it as
+  recommended for vasomotor symptoms at Level I evidence (good and consistent
+  scientific evidence). This entry summarizes what the literature reports for
+  navigation and is not medical advice.
+evidence_strength: moderate
+status: published
+sources:
+  - url: https://pubmed.ncbi.nlm.nih.gov/37252752/
+    title: "The Menopause Society — 2023 Nonhormone Therapy Position Statement (Menopause, 2023; PMID 37252752)"
+    publisher: The Menopause Society (Menopause journal)
+    date: "2023"
+    note: "NK3 receptor antagonist; first-in-class FDA-approved; Level I evidence for VMS."
+signals:
+  - sig-20260710-fezolinetant-mechanism
+confidence: medium
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: >-
+  Subject is the specific drug fezolinetant. The entities registry has no
+  dedicated id for it; it currently falls under the broad `non-hormonal-vasomotor`
+  category entity (which lists "fezolinetant" among its aliases, kind:
+  intervention). PROPOSED entities.yml addition: a dedicated `fezolinetant`
+  intervention entry for cleaner navigation. Single source (2023 Nonhormone
+  Therapy Position Statement), so confidence is medium; evidence_strength
+  moderate reflects the statement's Level I grading, though the underlying
+  trials/meta-analyses are not directly cited. Fezolinetant's use for vasomotor
+  symptoms is cross-referenced on the `vasomotor-symptoms` symptom entry, kept
+  distinct per profile (drug/intervention vs. the symptom it is studied for).

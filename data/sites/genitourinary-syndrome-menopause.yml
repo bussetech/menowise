@@ -1,0 +1,50 @@
+id: genitourinary-syndrome-menopause
+title: "Genitourinary syndrome of menopause"
+kind: symptom
+summary: >-
+  Genitourinary syndrome of menopause (GSM; also called vaginal atrophy or
+  vulvovaginal atrophy) encompasses genital, urinary, and sexual symptoms
+  associated with menopause. The AUA/SUFU/AUGS 2025 guideline reports
+  symptom-based diagnosis, shared decision-making, and local (vaginal) estrogen
+  as a first-line therapy. For mild symptoms, The Menopause Society's 2020
+  position statement reports that non-prescription nonhormone therapies provide
+  sufficient relief for most women. For moderate-to-severe GSM, low-dose
+  vaginal estrogens, vaginal dehydroepiandrosterone (DHEA), systemic estrogen
+  therapy, and ospemifene are reported as effective treatments. The 2025
+  guideline reports that patients using local estrogen, vaginal DHEA, or
+  ospemifene do not require endometrial surveillance, as limited data suggest
+  these treatments do not increase the risk of endometrial hyperplasia or
+  cancer. This entry summarizes what the literature reports for navigation and
+  is not medical advice.
+evidence_strength: moderate
+status: published
+sources:
+  - url: https://www.auajournals.org/doi/10.1097/JU.0000000000004589
+    title: "AUA / SUFU / AUGS — 2025 Guideline on Genitourinary Syndrome of Menopause"
+    publisher: American Urological Association / SUFU / AUGS (Journal of Urology)
+    date: "2025"
+    note: "First-line local estrogen; no endometrial surveillance required (limited data)."
+  - url: https://menopause.org/wp-content/uploads/default-document-library/2020-gsm-ps.pdf
+    title: "The Menopause Society — 2020 Genitourinary Syndrome of Menopause Position Statement (Menopause, 2020)"
+    publisher: The Menopause Society (Menopause journal)
+    date: "2020"
+    note: "Mild symptoms: non-prescription relief; moderate-severe: vaginal estrogens, DHEA, systemic estrogen, ospemifene."
+signals:
+  - sig-20260710-gsm-first-line-local-estrogen
+  - sig-20260710-gsm-mild-nonprescription
+  - sig-20260710-gsm-moderate-severe-treatments
+  - sig-20260710-gsm-no-endometrial-surveillance
+confidence: high
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: >-
+  Maps to entities.yml `genitourinary-syndrome-menopause` (kind: symptom). The
+  signals' site_hint labels GSM as a "topic", but the canonical entity
+  registers it as a symptom; kind follows the entity per profile — discrepancy
+  flagged. Two independent bodies (AUA/SUFU/AUGS 2025 and The Menopause Society
+  2020) concur on local vaginal estrogen as first-line and on the moderate-to-
+  severe treatment set, so confidence is high. evidence_strength: moderate —
+  sources are society/urology guidelines; the endometrial-surveillance safety
+  claim rests on explicitly "limited data" per the 2025 guideline. Local
+  vaginal estrogen is also catalogued as its own intervention entry
+  (`vaginal-estrogen`), kept distinct from this symptom entry per profile.

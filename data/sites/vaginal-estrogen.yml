@@ -1,0 +1,32 @@
+id: vaginal-estrogen
+title: "Local vaginal estrogen"
+kind: intervention
+summary: >-
+  Local (vaginal) estrogen is a topical estrogen therapy used for genitourinary
+  symptoms of menopause. The AUA/SUFU/AUGS 2025 Guideline on Genitourinary
+  Syndrome of Menopause reports that patients with recurrent urinary tract
+  infections may be offered local estrogen, with moderate-level evidence
+  supporting its use in reducing infection risk. Local vaginal estrogen is also
+  reported elsewhere as a first-line therapy for GSM. This entry summarizes what
+  the literature reports for navigation and is not medical advice.
+evidence_strength: moderate
+status: published
+sources:
+  - url: https://www.auajournals.org/doi/10.1097/JU.0000000000004589
+    title: "AUA / SUFU / AUGS — 2025 Guideline on Genitourinary Syndrome of Menopause"
+    publisher: American Urological Association / SUFU / AUGS (Journal of Urology)
+    date: "2025"
+    note: "Moderate-level evidence for reducing recurrent UTI risk."
+signals:
+  - sig-20260710-local-estrogen-recurrent-uti
+confidence: medium
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: >-
+  Maps to entities.yml `vaginal-estrogen` (intervention). Single source
+  (AUA/SUFU/AUGS 2025), so confidence is medium; the guideline itself grades
+  the recurrent-UTI effect as moderate-level evidence, so evidence_strength is
+  moderate. Additional guideline recommendations naming local vaginal estrogen
+  as a first-line therapy for GSM are recorded on the
+  `genitourinary-syndrome-menopause` symptom entry — the intervention and the
+  symptom it treats are kept as distinct entries per profile.

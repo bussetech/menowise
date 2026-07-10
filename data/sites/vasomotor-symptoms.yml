@@ -1,0 +1,42 @@
+id: vasomotor-symptoms
+title: "Vasomotor symptoms"
+kind: symptom
+summary: >-
+  Vasomotor symptoms — hot flushes and night sweats — are among the most
+  common menopausal symptoms. The Menopause Society's 2023 Nonhormone Therapy
+  Position Statement reports Level I evidence (good and consistent scientific
+  evidence) supporting cognitive-behavioral therapy, clinical hypnosis,
+  SSRIs/SNRIs, gabapentin, and fezolinetant (a neurokinin 3 receptor
+  antagonist); oxybutynin is graded at Levels I–II, and weight loss and
+  stellate ganglion block at Levels II–III. The same statement reports that
+  paced respiration, over-the-counter supplements and herbal remedies, cooling
+  techniques, trigger avoidance, exercise, yoga, mindfulness-based
+  intervention, relaxation, and acupuncture are not recommended for vasomotor
+  symptoms. Hormone therapy is reported separately as the most effective
+  treatment. This entry summarizes what the literature reports for navigation
+  and is not medical advice.
+evidence_strength: moderate
+status: published
+sources:
+  - url: https://pubmed.ncbi.nlm.nih.gov/37252752/
+    title: "The Menopause Society — 2023 Nonhormone Therapy Position Statement (Menopause, 2023; PMID 37252752)"
+    publisher: The Menopause Society (Menopause journal)
+    date: "2023"
+    note: "Grades non-hormone therapies for VMS by evidence level (Level I = good and consistent scientific evidence)."
+signals:
+  - sig-20260710-vms-nonhormone-recommended
+  - sig-20260710-vms-nonhormone-not-recommended
+confidence: medium
+first_seen: "2026-07-10"
+last_updated: "2026-07-10"
+notes: >-
+  Maps to entities.yml `vasomotor-symptoms` (symptom). Both signals derive from
+  a single source (The Menopause Society 2023 Nonhormone Therapy Position
+  Statement), so confidence is medium. evidence_strength set to moderate: the
+  source is a professional-society position statement (a guideline) but it
+  grades several therapies at Level I (controlled-trial) evidence; the
+  underlying trials/meta-analyses are not directly cited here. The "not
+  recommended" therapies are retained as negative evidence, not dropped
+  (GD-0004). Cross-references: hormone therapy (`menopausal-hormone-therapy`)
+  and fezolinetant (`fezolinetant`) are kept as distinct intervention entries
+  per profile (drug/intervention vs. the symptom it is studied for).
