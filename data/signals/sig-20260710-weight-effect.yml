@@ -1,0 +1,11 @@
+id: sig-20260710-weight-effect
+site_id: null
+site_hint: "Weight and body-composition change — symptom"
+attribute: effect
+value: "Around the start of the menopause transition the rate of fat gain roughly doubled and lean mass declined, continuing until ~2 years after the final menstrual period."
+source_url: https://www.swanstudy.org/changes-in-body-composition-and-weight-during-the-menopause-transition/
+source_title: "Changes in body composition and weight during the menopause transition (SWAN)"
+publisher: SWAN (Study of Women's Health Across the Nation)
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

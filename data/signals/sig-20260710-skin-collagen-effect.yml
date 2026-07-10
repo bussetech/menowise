@@ -1,0 +1,12 @@
+id: sig-20260710-skin-collagen-effect
+site_id: null
+site_hint: "Skin and hair changes — symptom"
+attribute: effect
+value: "After menopause skin collagen content declines (reported around 2% per year, with larger losses in the first years), reducing skin elasticity and hydration, and hair may thin (diffuse effluvium / female-pattern changes)."
+source_url: https://www.tandfonline.com/doi/full/10.1080/13697137.2022.2050206
+source_title: "Skin, hair and beyond: the impact of menopause (Climacteric 2022)"
+publisher: Climacteric
+source_date: "2022"
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

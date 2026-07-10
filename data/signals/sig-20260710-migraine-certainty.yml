@@ -1,0 +1,12 @@
+id: sig-20260710-migraine-certainty
+site_id: null
+site_hint: "Migraine and headache — symptom"
+attribute: certainty
+value: "The estrogen-withdrawal hypothesis is widely cited but the supporting evidence remains limited, constrained by methodologic inconsistencies and variable case definitions."
+source_url: https://pubmed.ncbi.nlm.nih.gov/37730536/
+source_title: "Migraine in menopause (The Journal of Headache and Pain 2023, PMID 37730536)"
+publisher: The Journal of Headache and Pain
+source_date: "2023"
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

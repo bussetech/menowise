@@ -1,0 +1,11 @@
+id: sig-20260710-weight-visceral-outcome
+site_id: null
+site_hint: "Weight and body-composition change — symptom"
+attribute: outcome
+value: "Visceral (abdominal) fat increases over the transition and is an independent predictor of metabolic syndrome, diabetes, and cardiovascular disease."
+source_url: https://www.swanstudy.org/changes-in-body-composition-and-weight-during-the-menopause-transition/
+source_title: "Changes in body composition and weight during the menopause transition (SWAN)"
+publisher: SWAN (Study of Women's Health Across the Nation)
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high
