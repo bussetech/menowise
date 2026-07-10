@@ -1,0 +1,12 @@
+id: sig-20260710-gsm-no-endometrial-surveillance
+site_id: null
+site_hint: "genitourinary syndrome of menopause — topic"
+attribute: safety
+value: "Patients using local estrogen, vaginal DHEA, or ospemifene do not require endometrial surveillance, as limited data suggest these treatments do not increase the risk of endometrial hyperplasia or cancer."
+source_url: https://www.auajournals.org/doi/10.1097/JU.0000000000004589
+source_title: "AUA / SUFU / AUGS — 2025 Guideline on Genitourinary Syndrome of Menopause"
+publisher: American Urological Association / SUFU / AUGS (Journal of Urology)
+source_date: "2025"
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

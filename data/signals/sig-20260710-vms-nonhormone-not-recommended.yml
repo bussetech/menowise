@@ -1,0 +1,12 @@
+id: sig-20260710-vms-nonhormone-not-recommended
+site_id: null
+site_hint: "vasomotor symptoms — symptom"
+attribute: guideline_recommendation
+value: "Not recommended for vasomotor symptoms: paced respiration, supplements and herbal remedies, cooling techniques, trigger avoidance, exercise, yoga, mindfulness-based intervention, relaxation, and acupuncture."
+source_url: https://pubmed.ncbi.nlm.nih.gov/37252752/
+source_title: "The Menopause Society — 2023 Nonhormone Therapy Position Statement (Menopause, 2023; PMID 37252752)"
+publisher: The Menopause Society (Menopause journal)
+source_date: "2023"
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

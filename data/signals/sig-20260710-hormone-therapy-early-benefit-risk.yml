@@ -1,0 +1,12 @@
+id: sig-20260710-hormone-therapy-early-benefit-risk
+site_id: null
+site_hint: "hormone therapy — intervention"
+attribute: guideline_recommendation
+value: "For women younger than 60 years or who are within 10 years of menopause onset and have no contraindications, the benefit-risk ratio is favorable for treatment of bothersome VMS and for prevention of bone loss."
+source_url: https://journals.lww.com/menopausejournal/fulltext/2022/07000/the_2022_hormone_therapy_position_statement_of_the.4.aspx
+source_title: "The Menopause Society — 2022 Hormone Therapy Position Statement (Menopause, 2022)"
+publisher: The Menopause Society (Menopause journal)
+source_date: "2022"
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

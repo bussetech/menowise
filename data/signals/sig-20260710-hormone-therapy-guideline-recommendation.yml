@@ -1,0 +1,12 @@
+id: sig-20260710-hormone-therapy-guideline-recommendation
+site_id: null
+site_hint: "hormone therapy — intervention"
+attribute: guideline_recommendation
+value: "Hormone therapy remains the most effective treatment for vasomotor symptoms (VMS) and the genitourinary syndrome of menopause and has been shown to prevent bone loss and fracture."
+source_url: https://journals.lww.com/menopausejournal/fulltext/2022/07000/the_2022_hormone_therapy_position_statement_of_the.4.aspx
+source_title: "The Menopause Society — 2022 Hormone Therapy Position Statement (Menopause, 2022)"
+publisher: The Menopause Society (Menopause journal)
+source_date: "2022"
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

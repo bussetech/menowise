@@ -1,0 +1,12 @@
+id: sig-20260710-gsm-mild-nonprescription
+site_id: null
+site_hint: "genitourinary syndrome of menopause — topic"
+attribute: guideline_recommendation
+value: "Nonhormone therapies available without a prescription provide sufficient relief for most women with mild genitourinary syndrome of menopause symptoms."
+source_url: https://menopause.org/wp-content/uploads/default-document-library/2020-gsm-ps.pdf
+source_title: "The Menopause Society — 2020 Genitourinary Syndrome of Menopause Position Statement (Menopause, 2020)"
+publisher: The Menopause Society (Menopause journal)
+source_date: "2020"
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high

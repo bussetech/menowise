@@ -1,0 +1,12 @@
+id: sig-20260710-local-estrogen-recurrent-uti
+site_id: null
+site_hint: "local (vaginal) estrogen — intervention"
+attribute: effect
+value: "Patients with recurrent urinary tract infections may be offered local estrogen, which has moderate-level evidence supporting its use in reducing infection risk."
+source_url: https://www.auajournals.org/doi/10.1097/JU.0000000000004589
+source_title: "AUA / SUFU / AUGS — 2025 Guideline on Genitourinary Syndrome of Menopause"
+publisher: American Urological Association / SUFU / AUGS (Journal of Urology)
+source_date: "2025"
+observed_date: "2026-07-10"
+collected_by: gn_info_scout/1.0.0
+confidence: high
